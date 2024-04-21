@@ -1,0 +1,8 @@
+ultralytics
+opencv-python
+numpy
+torch
+timm
+serial
+pynmea2
+picamera2
