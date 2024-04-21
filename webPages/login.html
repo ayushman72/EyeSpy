@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EyeSpy</title>
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="icon" type="image/x-icon" href="assets/eyespy-photoaidcom-cropped.png">
+ 
+
+  <script type="module">
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  // Get the form element
+  document.getElementById("email").value = "" ;
+        document.getElementById("password").value = "";
+});
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+    import{ getAuth , createUserWithEmailAndPassword , signOut , signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCknq-z48Mcuz47H4Fe8rgAkiii-kOtJDc",
+      authDomain: "eyespy-69983.firebaseapp.com",
+      projectId: "eyespy-69983",
+      storageBucket: "eyespy-69983.appspot.com",
+      messagingSenderId: "194833338564",
+      appId: "1:194833338564:web:300bd01e5f68b3d2013991",
+      measurementId: "G-DXH7W3BSXP"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    
+    const auth = getAuth();
+
+    // document.getElementById("signup").addEventListener("click", function() {
+		//   var email =  document.getElementById("email").value;
+		//   var password = document.getElementById("password").value;
+		//   //For new registration
+		//   createUserWithEmailAndPassword(auth, email, password)
+		//   .then((userCredential) => {
+		//     // Signed in 
+		//     const user = userCredential.user;
+		//     console.log(user);
+		//     alert("Registration successfully!!");
+		//     // ...
+		//   })
+		//   .catch((error) => {
+		//     const errorCode = error.code;
+		//     const errorMessage = error.message;
+		//     // ..
+		//     console.log(errorMessage);
+		//     alert(error);
+		//   });		  		  
+	  // });
+	  //----- End
+
+	  //----- Login code start	  
+	  document.getElementById("login").addEventListener("click", function() {
+      console.log("login button clicked");
+		  var email =  document.getElementById("email").value;
+		  var password = document.getElementById("password").value;
+
+		  signInWithEmailAndPassword(auth, email, password)
+		  .then((userCredential) => {
+		    alert("login successful");
+		    const user = userCredential.user;
+		    // console.log(user);
+		    // alert(user.email+" Login successfully!!!");
+		    // document.getElementById('logout').style.display = 'block';
+		    // ...
+        document.getElementById("email").value = "" ;
+        document.getElementById("password").value = "";
+        if(document.getElementById("email").value == "" )
+        {window.location.href='home1.html';}
+
+		  })
+		  .catch((error) => {
+		    const errorCode = error.code;
+		    const errorMessage = error.message;
+		    console.log(errorMessage);
+		    alert(errorMessage);
+		  });		  		  
+	  });
+	  //----- End
+
+	  //----- Logout code start	  
+	  // document.getElementById("logout").addEventListener("click", function() {
+		//   signOut(auth).then(() => {
+		// 	  // Sign-out successful.
+		// 	  console.log('Sign-out successful.');
+		// 	  alert('Sign-out successful.');
+		// 	  document.getElementById('logout').style.display = 'none';
+		// 	}).catch((error) => {
+		// 	  // An error happened.
+		// 	  console.log('An error happened.');
+		// 	});		  		  
+	  // });
+	  //----- End
+
+
+  </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <form action="#">
+      <h2>Login</h2>
+        <div class="input-field">
+        <input id="email" type="text" required>
+        
+      </div>
+      <div class="input-field">
+        <input id="password" type="password" required>
+        
+      </div>
+      <div class="forget">
+        <label for="remember">
+          <input type="checkbox" id="remember">
+          <p>Remember me</p>
+        </label>
+        <a href="#">Forgot password?</a>
+      </div>
+      <button id="login" type="button" >Log In</button>
+      
+      
+      <div class="register">
+        <p>Don't have an account? <a href="register.html">Register</a></p>
+      </div>
+    </form>
+    
+    <a href="home.html">
+      <button type="submit" class="Emergency">Home Page</button>
+    </a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+body {
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #ffffff; /* White background for the header */
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  position: fixed; /* Make the navbar fixed */
+  width: 100%;
+  z-index: 1000; /* Ensure the navbar stays on top */
+  top: 0; /* Adjusted margin-top to be 0 */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right:25px;
+}
+
+.login {
+  background-color: orange; 
+  color: #ffffff; 
+  
+}
+
+.options {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.options li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.options li:last-child {
+  margin-right: 0;
+}
+
+.options li a {
+  text-decoration: none;
+  color: #000000; /* Black text */
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.options li a:hover {
+  color: #666666; /* Darker shade of gray on hover */
+}
+
+.content {
+  text-align: center;
+  margin-top: 32vh; /* Adjust as needed */
+}
+
+.content h2 {
+  font-size: 36px;
+}
+
+.buttons-container {
+  margin-top: 20px;
+}
+
+.view-live-feed {
+  background-color: orange; /* Orange background for the view live feed button */
+  color: #ffffff; /* White text for the view live feed button */
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.learn-more {
+  padding: 15px 30px;
+  border: 2px solid orange; /* Orange border for the learn more button */
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  color: orange; /* Orange text for the learn more button */
+}
+
+/* Existing CSS */
+
+.grey-background {
+  position: absolute;
+  width: 100%;
+  background-color: #5D576B; /* Grey background color */
+  top: 70vh; /* Adjusted top position based on button height */
+  
+  z-index: -1; /* Ensure it's behind other content */
+}
+/* Existing CSS */
+
+
+.grey-content {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.grey-content h3 {
+  font-size: 22px; /* Small font size for the heading */
+  margin-bottom: 5vh; /* Add some space below the heading */
+  color:white;
+  margin-top:8vh;
+}
+
+.grey-content p {
+  font-size: 28px; /* Large font size for the text */
+  margin: 0; /* Remove default margin */
+  color: white;
+  font-weight: 900;
+}
+
+/* Existing CSS */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top:10vh;
+}
+
+.card {
+  width: 40vw; /* Two cards per row, with spacing */
+  margin-bottom: 7vh;
+  background-color: #656073; /* Slight grey background color for the cards */
+  padding: 20px;
+}
+
+.card h4 {
+  margin-top: 0;
+  color:white;
+  font-weight: 900;
+}
+
+.card p {
+  margin-bottom: 0;
+  font-size:20px;
+  font-weight:200;
+}
+
+/* Media query for phones */
+@media (max-width: 768px) {
+  .card {
+      width: 40vw; /* Single card per row for smaller screens */
+  }
+}
+
+/* Media query for medium and large screens */
+@media (min-width: 769px) {
+  .card {
+      width: 40vw; /* Two cards per row for medium and large screens */
+  }
+}
+
+/* Existing CSS */
+

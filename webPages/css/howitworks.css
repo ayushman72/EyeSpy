@@ -1,0 +1,176 @@
+body {
+  background-color: #000 !important; /* Black background */
+  color: #fff; /* White text */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.text {
+  text-align: justify;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #000000; /* White background */
+  color: #ffffff; /* Black text */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #ffffff; /* White background for the header */
+  padding: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  position: fixed; /* Make the navbar fixed */
+  width: 100%;
+  z-index: 1000; /* Ensure the navbar stays on top */
+  top: 0; /* Adjusted margin-top to be 0 */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right:25px;
+}
+
+.login {
+  background-color: orange; 
+  color: #ffffff; 
+  
+}
+
+.options {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.options li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.options li:last-child {
+  margin-right: 0;
+}
+
+.options li a {
+  text-decoration: none;
+  color: #000000; /* Black text */
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.options li a:hover {
+  color: #666666; /* Darker shade of gray on hover */
+}
+
+.content {
+  text-align: center;
+  margin-top: 32vh; /* Adjust as needed */
+}
+
+.content h2 {
+  font-size: 36px;
+}
+
+.buttons-container {
+  margin-top: 20px;
+}
+
+
+
+
+
+/* Existing CSS */
+
+
+
+
+
+
+
+
+
+
+/* Media query for phones */
+
+
+/* Existing CSS */
+
+/* Existing CSS */
+
+.image1 {
+  position: relative; /* Add relative positioning to the container */
+  margin-right:10vw;
+}
+
+.dropdown-menu {
+  position: absolute !important; /* Set dropdown menu position to absolute */
+}
+
+.nav-link.dropdown-toggle {
+  padding: 0; /* Remove padding from the dropdown toggle */
+}
+
+.container{
+  margin-top: 20vh;
+  color:white;
+}
+/* Existing CSS */
+.ss{
+  width:60%;
+  margin-left: 16vw;
+  margin-top:2vh;
+}
+
+.text{
+  margin-top: 5vh;
+  font-size: 18px;
+}
+
+.ex{
+  width:600px;
+  height:500px;
+  margin-left:2vw;
+  margin-top:5vh !important;
+  position: relative;
+  
+}
+
+.ex:hover{
+  transform: scale(1.2);
+   margin-top: 10vh !important;
+}
+
+.imgg{
+  border-radius: 10px;
+}

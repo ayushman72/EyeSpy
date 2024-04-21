@@ -1,0 +1,66 @@
+body {
+  background: #ffffff;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #000000;
+}
+
+.profile-button {
+  background: #ffffff;
+  color:black;
+  box-shadow: none;
+  border: none
+}
+
+.profile-button:hover {
+  background: #00246b;
+}
+
+.profile-button:focus {
+  background: #00246b;
+  box-shadow: none
+}
+
+.profile-button:active {
+  background: #00246b;
+  box-shadow: none
+}
+
+.back:hover {
+  color: #000000;
+  cursor: pointer
+}
+
+.labels {
+  font-size: 11px;
+  color :#ffffff;
+}
+
+.add-experience{
+  
+  color:#00246b;
+  border: solid #00246b 5px;
+  
+}
+
+.add-experience:hover {
+  background: #00246b;
+  color: #cadcfc;
+  cursor: pointer;
+  border: solid 1px #00246b;
+}
+
+.second-page{
+  background-color: #000000;
+}
+
+.email{
+  color:#ffffff ;
+  font-size: 18px;
+}
+.email1{
+  color:#ffffff;
+}
+

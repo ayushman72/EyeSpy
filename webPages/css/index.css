@@ -1,0 +1,167 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+/* Your other CSS styles */
+
+
+
+.centered-image {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  width: 0;
+  transition: opacity 1s, width 1s;
+  
+
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 16%;
+  }
+}
+
+.text-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto; /* Centers horizontally */
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center; /* Aligns text horizontally at the center */
+}
+
+.animated-text {
+  font-size: 200%;
+  color: rgb(255, 255, 255);
+  opacity: 0; /* Initially hide the text */
+  animation: slideIn 1s ease forwards;
+  
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0; /* Start with opacity 0 */
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1; /* Fade in the text */
+  }
+}
+
+.but {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto; /* Centers horizontally */
+  top: 90%; /* Adjust top position as needed */
+  height: 7vh;
+  width: 15%;
+  border-radius: 50px;
+  background-color: rgb(64, 255, 0);
+  font-size: 20px;
+  margin-top: 30px;
+  display: none; /* Initially hide the button */
+}
+
+.but:hover{
+  background-color: rgb(255, 128, 0);
+}
+
+@media screen and (max-width:420px){
+  .centered-image {
+    position: absolute;
+    top: 9%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 0;
+    transition: opacity 1.5s, width 1.5s;
+    
+  
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      width: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 28%;
+    }
+  }
+
+  .text-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto; /* Centers horizontally */
+    top: 45%;
+    transform: translateY(-50%);
+    text-align: center; /* Aligns text horizontally at the center */
+  }
+  
+  .animated-text {
+    font-size: 200%;
+    color: #cadcfc;
+    opacity: 0; /* Initially hide the text */
+    animation: slideIn 6s ease forwards;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0; /* Start with opacity 0 */
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1; /* Fade in the text */
+    }
+  }
+
+  .but {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto; /* Centers horizontally */
+    top: 95%; /* Adjust top position as needed */
+    height: 7vh;
+    width: 35%;
+    border-radius: 50px;
+    background-color: #cadcfc;
+    font-size: 20px;
+    display: none; /* Initially hide the button */
+  }
+  
+  .but:hover{
+    background-color: rgb(255, 128, 0);
+  }
+}
+
+#main-video{
+  opacity: 1;
+  filter:blur(5px);
+}

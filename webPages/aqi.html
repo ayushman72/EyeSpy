@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EyeSpy</title>
+  <link rel="stylesheet" href="css/aqi.css">
+  <link rel="icon" type="image/x-icon" href="assets/eyespy-photoaidcom-cropped.png">
+  <script src="js/aqi.js" defer></script>
+</head>
+<body>
+  <h1>Air Quality Index Dashboard</h1>
+  <div class="container">
+    <div class="aqi-input">
+      <h3>Enter a City Name</h3>
+      <input class="city-input" type="text" placeholder="E.g., New York, London, Tokyo">
+      <button class="search-btn">Search</button>
+      <div class="separator"></div>
+      <button class="location-btn">Use Current Location</button>
+      <a href="object-detection.html"><button class="location-btn">Monitoring Dashboard</button></a>
+    </div>
+    <div class="aqi-data">
+      <div class="current-aqi">
+        <div class="details">
+          <h2>_______ ( ______ )</h2>
+          <h6>AQI: __</h6>
+          <h6>PM2.5: __ μg/m³</h6>
+          <h6>PM10: __ μg/m³</h6>
+        </div>
+      </div>
+      <div class="days-forecast">
+        <h2></h2>
+        <ul class="aqi-cards">
+          <!-- AQI forecast cards will be populated here dynamically -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

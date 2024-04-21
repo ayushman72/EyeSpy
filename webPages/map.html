@@ -1,0 +1,60 @@
+<html>
+        <head>
+          <title>EyeSpy</title>
+          <meta name="viewport" content="initial-scale=1.0">
+          <meta charset="utf-8">
+          <link rel="icon" type="image/x-icon" href="assets/eyespy-photoaidcom-cropped.png">
+          <style>
+          html,
+          body,
+          #map {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 90vh;
+          }
+          </style>
+             <script src="https://apis.mappls.com/advancedmaps/api/24bd0092801ff10f3c169caa67475da5/map_sdk?layer=vector&v=3.0&callback=initMap1" defer async></script>
+            </head>
+        <body>
+          <div class="header" style="padding:18px; display: flex; justify-content: center; font-size: 24px; font-weight:900; background-color: rgb(22, 200, 22);"> Live Location</div>
+          <div style="padding:8px; display: flex; justify-content: center; background-color: rgb(191, 191, 191);" >
+            <a href="object-detection.html">
+              <button style="padding:10px; font-size:15px;">Monitoring Dashboard</button>
+            </a>
+          </div>
+                    <div id="map"></div>
+                      <script>
+    var map, Marker1;
+
+    function initMap1(lat , lng) {
+      map = new mappls.Map('map', {
+        center: [28.61, 77.23],
+        zoomControl: true,
+        location: true
+      });
+      
+      Marker1 = new mappls.Marker({
+        map: map,
+        position: {
+          "lat": lat,
+          "lng": lng
+        },
+        fitbounds: true,
+        icon_url: 'https://apis.mapmyindia.com/map_v3/1.png'
+      });
+    }
+
+    setInterval(function() {
+      const local = 'http://192.168.144.230:5000/data';
+    fetch(local)
+        .then(response => response.json())
+        .then(jsonData => {
+            initMap1(jsonData.lat, jsonData.lng);
+        })
+        .catch(error => console.error("Error fetching or parsing JSON:", error)); 
+}, 10000);
+    
+  </script>
+        </body>
+      </html>
