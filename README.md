@@ -5,7 +5,15 @@ Our project uses two distinct models; The MiDaS monocular Depth perception model
 <h2>Hardware used and inference results</h2>
 To keep the device user's module independent of network limitations, we decided to go ahead with edge device inference. To this effect we used a Raspberry Pi 4 Model B, a camera module, and a GPS Neo - 6M. The inference time on the raspberry pi was 3200-4000 ms, after using multiprocessing, which included processing of the inference models and sending the data to the web page. 
 The basic inference and testing was done on windows laptop with following specifications:
-Windows - 10
+
+
+Windows - 11
+
+
 Python 3.11.6
+
+
 RAM - 8 GB
+
+
 CPU - AMD Ryzen 3 5300U
