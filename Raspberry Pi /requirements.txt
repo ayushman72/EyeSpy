@@ -6,3 +6,5 @@ timm
 serial
 pynmea2
 picamera2
+Flask
+flask_cors
