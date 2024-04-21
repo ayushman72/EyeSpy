@@ -4,3 +4,5 @@ numpy
 torch
 timm
 pyttsx3
+Flask
+flask_cors
